@@ -1,5 +1,8 @@
-urlwatch:
-  image: vimagick/urlwatch
-  volumes:
-    - ./data:/root/.urlwatch
-  restart: unless-stopped
+version: "3"
+services:
+  urlwatch:
+    image: vimagick/urlwatch
+    volumes:
+      - ./data:/root/.urlwatch
+    restart: unless-stopped
+    container_name: urlwatch
